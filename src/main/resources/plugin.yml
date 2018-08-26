@@ -1,0 +1,6 @@
+name: AsyncSkulls
+version: ${project.version}
+main: it.feargames.asyncskulls.AsyncSkulls
+load: STARTUP
+authors: [sgdc3]
+description: ${project.description}
