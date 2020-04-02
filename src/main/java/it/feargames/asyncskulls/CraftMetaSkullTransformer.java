@@ -6,22 +6,22 @@ import me.yamakaja.runtimetransformer.annotation.CallParameters;
 import me.yamakaja.runtimetransformer.annotation.Inject;
 import me.yamakaja.runtimetransformer.annotation.InjectionType;
 import me.yamakaja.runtimetransformer.annotation.TransformByName;
-import net.minecraft.server.v1_13_R2.GameProfileSerializer;
-import net.minecraft.server.v1_13_R2.NBTTagCompound;
-import net.minecraft.server.v1_13_R2.TileEntitySkull;
+import net.minecraft.server.v1_12_R1.GameProfileSerializer;
+import net.minecraft.server.v1_12_R1.NBTTagCompound;
+import net.minecraft.server.v1_12_R1.TileEntitySkull;
 
 import javax.annotation.Nullable;
 
-@TransformByName("org.bukkit.craftbukkit.v1_13_R2.inventory.CraftMetaSkull")
+@TransformByName("org.bukkit.craftbukkit.v1_12_R1.inventory.CraftMetaSkull")
 public class CraftMetaSkullTransformer {
 
     private GameProfile profile;
 
     @CallParameters(
             type = CallParameters.Type.SPECIAL,
-            owner = "org/bukkit/craftbukkit/v1_13_R2/inventory/CraftMetaItem",
+            owner = "org/bukkit/craftbukkit/v1_12_R1/inventory/CraftMetaItem",
             name = "applyToItem",
-            desc = "(Lnet/minecraft/server/v1_13_R2/NBTTagCompound;)V"
+            desc = "(Lnet/minecraft/server/v1_12_R1/NBTTagCompound;)V"
     )
     private native void super_applyToItem(NBTTagCompound tag);
 
